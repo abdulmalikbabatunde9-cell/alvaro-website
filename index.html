@@ -6,154 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armando Alvarez | General Contractor</title>
 
-    <!-- Fonts -->
+    <!-- Fonts: Cormorant Garamond for elegant serif headings, Inter for clean body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@600;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400&display=swap"
         rel="stylesheet">
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Custom Mouse Cursor -->
-    <div class="cursor"></div>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="#" class="brand">ARMANDO ALVAREZ.</a>
+    <!-- Minimal Navigation -->
+    <nav class="fade-in">
+        <a href="#" class="logo">Armando Alvarez.</a>
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
+            <a href="#about">Studio</a>
+            <a href="#services">Expertise</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <video class="hero-video" autoplay loop muted playsinline>
-            <source
-                src="https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-building-with-glass-facades-4251-large.mp4"
-                type="video/mp4">
-        </video>
-
-        <div class="container hero-content">
-            <div class="hero-text-wrapper reveal">
-                <h1>Crafting Spaces.<br>Defining Endurance.</h1>
-                <p>Over two decades of structural integrity and refined aesthetics in Malvern, PA. We don't just
-                    build—we engineer peace of mind.</p>
-                <div class="btn-wrapper">
-                    <a href="#contact" class="btn magnetic-btn">Start Your Project</a>
-                </div>
-            </div>
+        <div class="hero-content scroll-reveal">
+            <h1>Refined Spaces.<br>Enduring Craft.</h1>
+            <p>Elevating residential and commercial properties in Malvern, PA with over two decades of quiet precision
+                and structural mastery.</p>
+            <a href="#contact" class="btn">Inquire Now</a>
+        </div>
+        <div class="hero-image-wrapper fade-in">
+            <!-- Minimalist architecture image -->
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1920"
+                alt="Minimalist Architecture" class="hero-image">
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container about-grid">
-            <div class="reveal">
-                <h2>Mastery in Every Detail.</h2>
-            </div>
-            <div class="reveal">
-                <p>Armando Alvarez Contractor brings over 20 years of hands-on experience in residential and commercial
-                    construction across Pennsylvania. Known for precision, dependability, and honest work, we deliver
-                    exceptional results that stand the test of time.</p>
-
-                <div class="stats">
-                    <div class="stat-item">
-                        <h3>20+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>100%</h3>
-                        <p>Client Satisfaction</p>
-                    </div>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="scroll-reveal">A legacy of precision.<br>Built to stand the test of time.</h2>
+            <div class="about-grid">
+                <div class="about-text scroll-reveal delay-1">
+                    <p>Armando Alvarez Contractor brings over 20 years of hands-on experience to the art of
+                        construction. We believe that true quality speaks softly. From meticulous framing to flawless
+                        finishing, our approach is rooted in an uncompromising dedication to the details.</p>
+                    <a href="#services" class="text-link">Explore our disciplines <span>&rarr;</span></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services-section">
+    <section id="services" class="services">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Our Disciplines.</h2>
-                <div class="btn-wrapper">
-                    <a href="#contact" class="btn btn-dark magnetic-btn">View All Services</a>
+            <div class="service-row scroll-reveal">
+                <div class="service-info">
+                    <span class="service-number">01</span>
+                    <h3>Complete Renovations</h3>
+                    <p>Transforming interiors with a delicate balance of modern functionality and timeless aesthetics.
+                        Every surface, perfectly considered.</p>
+                </div>
+                <div class="service-image-container">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+                        alt="Interior Renovation">
                 </div>
             </div>
 
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card reveal">
-                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=800"
-                        alt="Interior Renovations" class="service-img">
-                    <div class="service-overlay">
-                        <h3 class="service-title">Complete Renovations</h3>
-                        <p class="service-desc">Transforming residential and commercial interiors with flawless
-                            execution.</p>
-                    </div>
+            <div class="service-row reverse scroll-reveal">
+                <div class="service-info">
+                    <span class="service-number">02</span>
+                    <h3>Roofing & Exteriors</h3>
+                    <p>Protecting your sanctuary. We deliver robust, weather-tested exterior solutions that gracefully
+                        complement your property's architecture.</p>
                 </div>
+                <div class="service-image-container">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800"
+                        alt="Roofing and Exterior">
+                </div>
+            </div>
 
-                <!-- Service 2 -->
-                <div class="service-card reveal" style="transition-delay: 0.1s;">
+            <div class="service-row scroll-reveal">
+                <div class="service-info">
+                    <span class="service-number">03</span>
+                    <h3>Refined Finishing</h3>
+                    <p>From custom carpentry to premium painting, our finishing touches bring warmth, character, and
+                        absolute perfection to your space.</p>
+                </div>
+                <div class="service-image-container">
                     <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&q=80&w=800"
-                        alt="Roofing & Exterior" class="service-img">
-                    <div class="service-overlay">
-                        <h3 class="service-title">Roofing & Exteriors</h3>
-                        <p class="service-desc">Durable, weather-tested protection engineered for longevity.</p>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="service-card reveal">
-                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=800"
-                        alt="Framing and Carpentry" class="service-img">
-                    <div class="service-overlay">
-                        <h3 class="service-title">Custom Carpentry</h3>
-                        <p class="service-desc">Precision framing, drywall, and structural additions built to spec.</p>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="service-card reveal" style="transition-delay: 0.1s;">
-                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800"
-                        alt="Painting Services" class="service-img">
-                    <div class="service-overlay">
-                        <h3 class="service-title">Premium Painting</h3>
-                        <p class="service-desc">Impeccable interior and exterior finishes that elevate your property.
-                        </p>
-                    </div>
+                        alt="Refined Finishing">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container reveal">
-            <p
-                style="margin-bottom: 2rem; color: var(--text-muted); text-transform: uppercase; font-weight: 500; letter-spacing: 2px;">
-                Ready to build?</p>
-            <a href="mailto:armandoalvarezcontractor@gmail.com" class="contact-link">Let's work together.</a>
-            <br>
-            <div class="btn-wrapper" style="margin-top: 2rem;">
-                <a href="tel:4848413323" class="btn btn-dark magnetic-btn">Call (484) 841-3323</a>
+    <section id="contact" class="contact scroll-reveal">
+        <div class="container text-center">
+            <h2>Let us build your vision.</h2>
+            <p class="contact-subtext">Accepting new projects in Pennsylvania.</p>
+            <a href="mailto:armandoalvarezcontractor@gmail.com"
+                class="contact-email">armandoalvarezcontractor@gmail.com</a>
+            <div class="contact-phone">
+                <a href="tel:4848413323">+1 (484) 841-3323</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div>© 2026 Armando Alvarez Contractor. All Rights Reserved.</div>
-        <div>Malvern, PA 19355</div>
+    <footer class="fade-in">
+        <p>&copy; 2026 Armando Alvarez Contractor. All rights reserved.</p>
+        <p>Malvern, PA</p>
     </footer>
 
-    <!-- External JavaScript -->
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
