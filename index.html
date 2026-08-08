@@ -1,127 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armando Alvarez | General Contractor</title>
-
-    <!-- Fonts: Cormorant Garamond for elegant serif headings, Inter for clean body text -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- Minimal Navigation -->
-    <nav class="fade-in">
-        <a href="#" class="logo">Armando Alvarez.</a>
-        <div class="nav-links">
-            <a href="#about">Studio</a>
-            <a href="#services">Expertise</a>
-            <a href="#contact">Contact</a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A&A Contractor - renovations, repairs, and exterior work across Pennsylvania." />
+    <title>A&A Contractor - Work that holds up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="brand" href="#top">A&amp;A CONTRACTOR<small>ARMANDO ALVAREZ</small></a>
+      <div class="nav-items"><a href="#services">Services</a><a href="#process">Process</a><a href="#work">Project ideas</a><button class="pill js-modal">Get a free estimate</button></div>
+      <button class="menu js-menu">Menu</button>
     </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content scroll-reveal">
-            <h1>Refined Spaces.<br>Enduring Craft.</h1>
-            <p>Elevating residential and commercial properties in Malvern, PA with over two decades of quiet precision
-                and structural mastery.</p>
-            <a href="#contact" class="btn">Inquire Now</a>
-        </div>
-        <div class="hero-image-wrapper fade-in">
-            <!-- Minimalist architecture image -->
-            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1920"
-                alt="Minimalist Architecture" class="hero-image">
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="scroll-reveal">A legacy of precision.<br>Built to stand the test of time.</h2>
-            <div class="about-grid">
-                <div class="about-text scroll-reveal delay-1">
-                    <p>Armando Alvarez Contractor brings over 20 years of hands-on experience to the art of
-                        construction. We believe that true quality speaks softly. From meticulous framing to flawless
-                        finishing, our approach is rooted in an uncompromising dedication to the details.</p>
-                    <a href="#services" class="text-link">Explore our disciplines <span>&rarr;</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="service-row scroll-reveal">
-                <div class="service-info">
-                    <span class="service-number">01</span>
-                    <h3>Complete Renovations</h3>
-                    <p>Transforming interiors with a delicate balance of modern functionality and timeless aesthetics.
-                        Every surface, perfectly considered.</p>
-                </div>
-                <div class="service-image-container">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
-                        alt="Interior Renovation">
-                </div>
-            </div>
-
-            <div class="service-row reverse scroll-reveal">
-                <div class="service-info">
-                    <span class="service-number">02</span>
-                    <h3>Roofing & Exteriors</h3>
-                    <p>Protecting your sanctuary. We deliver robust, weather-tested exterior solutions that gracefully
-                        complement your property's architecture.</p>
-                </div>
-                <div class="service-image-container">
-                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800"
-                        alt="Roofing and Exterior">
-                </div>
-            </div>
-
-            <div class="service-row scroll-reveal">
-                <div class="service-info">
-                    <span class="service-number">03</span>
-                    <h3>Refined Finishing</h3>
-                    <p>From custom carpentry to premium painting, our finishing touches bring warmth, character, and
-                        absolute perfection to your space.</p>
-                </div>
-                <div class="service-image-container">
-                    <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&q=80&w=800"
-                        alt="Refined Finishing">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact scroll-reveal">
-        <div class="container text-center">
-            <h2>Let us build your vision.</h2>
-            <p class="contact-subtext">Accepting new projects in Pennsylvania.</p>
-            <a href="mailto:armandoalvarezcontractor@gmail.com"
-                class="contact-email">armandoalvarezcontractor@gmail.com</a>
-            <div class="contact-phone">
-                <a href="tel:4848413323">+1 (484) 841-3323</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="fade-in">
-        <p>&copy; 2026 Armando Alvarez Contractor. All rights reserved.</p>
-        <p>Malvern, PA</p>
-    </footer>
-
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy"><div><div class="kicker">Pennsylvania contractor &middot; since 2004</div><h1>Work that holds up.</h1><p class="hero-summary">Thoughtful renovations, dependable repairs, and exterior work for the places that matter most.</p><button class="underline-link js-modal">Tell us what you need <span>&nearr;</span></button></div><div class="hero-meta">Residential + commercial<br />Malvern and surrounding PA</div></div>
+        <div class="hero-image"><span>Skilled hands. Clear communication. A result you can live with.</span></div>
+      </section>
+      <section class="credibility"><p>For more than 20 years, A&amp;A has delivered reliable work with an honest, straightforward approach.</p><div class="stat"><strong>20+</strong><span>Years hands-on</span></div><div class="stat"><strong>PA</strong><span>Based in Malvern</span></div><div class="stat"><strong>Free</strong><span>Project estimates</span></div></section>
+      <section class="section statement"><div class="kicker">A more considered approach</div><div class="statement-copy"><h2>Your home deserves more than a quick fix.</h2><p>We take on the work that keeps a property strong, functional, and ready for the years ahead - with the same attention whether it is one room, one repair, or a complete transformation.</p></div></section>
+      <section class="section services" id="services"><div class="services-head"><div><div class="kicker">Services, made clear</div><h2 class="section-title">The work you need. The finish you want.</h2></div><p>From the elements outside to the everyday spaces within, our team brings practical expertise to every step of your project.</p></div><div class="service-list"><div class="service"><span class="number">01</span><h3>Kitchen + bath renewal</h3><p>Rework the rooms that carry your day - layout, surfaces, tile, paint, flooring, and finishing details.</p><span class="arrow">&nearr;</span></div><div class="service"><span class="number">02</span><h3>Basements + living spaces</h3><p>Turn an underused level into a family room, workspace, guest area, or flexible space that earns its square footage.</p><span class="arrow">&nearr;</span></div><div class="service"><span class="number">03</span><h3>Roofing + exterior care</h3><p>Protect your property with roofing repairs, gutters, deck work, pressure washing, and exterior refreshes.</p><span class="arrow">&nearr;</span></div><div class="service"><span class="number">04</span><h3>Drywall, paint + flooring</h3><p>Get the foundational work right, from clean drywall repairs to surfaces and finishes that make a room feel complete.</p><span class="arrow">&nearr;</span></div></div></section>
+      <section class="section process" id="process"><div class="process-intro"><div class="kicker">How it works</div><h2 class="section-title">A calm process, start to finish.</h2><p>You never need to chase down the next step. We scope the work clearly, keep communication simple, and bring the plan to life with care.</p></div><div class="steps"><div class="step"><span>01</span><h3>Walk the space.</h3><p>We hear what is not working, talk through your goals, and understand the practical needs behind the project.</p></div><div class="step"><span>02</span><h3>Make a clear plan.</h3><p>Receive an honest estimate and a straightforward understanding of the work before we begin.</p></div><div class="step"><span>03</span><h3>Build with care.</h3><p>Our crew arrives ready, keeps you updated, and pays attention to the details that make the difference.</p></div></div></section>
+      <section class="feature"><div class="feature-wrap"><div class="feature-image" aria-label="Warm modern kitchen renovation inspiration"></div><div class="feature-copy"><div><div class="kicker">Made for everyday living</div><h2>The room where everything comes together.</h2><p>A well-made kitchen is more than a collection of finishes. It is a place that works hard, gathers people in, and makes the daily rhythm feel easier.</p></div><div class="tags"><span class="tag">Cabinet updates</span><span class="tag">Tile + surfaces</span><span class="tag">Flooring</span><span class="tag">Finish carpentry</span></div></div></div></section>
+      <section class="section" id="work"><div class="gallery-head"><div><div class="kicker">Project possibilities</div><h2 class="section-title">Bring more out of every room.</h2></div><p>Thought starters for the kinds of spaces A&amp;A helps homeowners improve - designed around the way you actually live.</p></div><div class="gallery"><article class="gallery-card"><div class="gallery-image"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=90" alt="Refined neutral bathroom" /></div><h3>A bathroom that resets.</h3><p>Clean lines, durable materials, and a better start to every day.</p></article><article class="gallery-card"><div class="gallery-image"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1100&q=90" alt="Crafted living room interior" /></div><h3>More room to live.</h3><p>Basement and living-space updates built around comfort and flexibility.</p></article><article class="gallery-card"><div class="gallery-image"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=90" alt="Warm contemporary interior" /></div><h3>Details that complete it.</h3><p>From drywall and paint to flooring, trim, and the last careful finish.</p></article></div></section>
+      <section class="section contact"><div><div class="kicker">Start the conversation</div><h2>Let's make your next space work better.</h2><p>Whether you are planning a renovation or have a repair that cannot wait, we are ready to talk it through.</p></div><div class="contact-actions"><button class="pill js-modal">Request a free estimate <span>&rarr;</span></button><div class="contact-details"><span>(484) 841-3323</span><span>Mon-Fri &middot; 7am-10pm</span></div></div></section>
+    </main>
+    <footer class="footer"><span>&copy; 2026 A&amp;A Contractor</span><span>Malvern, Pennsylvania</span><a href="mailto:armandoalvarezcontractor@gmail.com">armandoalvarezcontractor@gmail.com</a></footer>
+    <div class="modal" id="modal" aria-hidden="true"><div class="modal-box"><button class="close" aria-label="Close">&times;</button><div class="kicker">Free estimate</div><h2>Tell us about it.</h2><p>Share a few details and we'll be in touch to discuss your project.</p><form id="estimate-form"><input required placeholder="Your name" /><input required type="email" placeholder="Email address" /><textarea placeholder="What would you like to improve?"></textarea><button class="pill">Send project details &rarr;</button></form></div></div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
