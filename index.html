@@ -1,195 +1,413 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A&A Contractor - renovations, repairs, and exterior work across Pennsylvania." />
-    <title>A&A Contractor - Work that holds up</title>
+    <meta name="description" content="A&A Contractor — licensed, insured renovation and repair contractor in Malvern, PA. Kitchens, baths, basements, roofing, and exterior work done right the first time." />
+    <title>A&A Contractor — Work that holds up</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-    <nav class="nav js-nav">
-        <a class="brand" href="#top">A&amp;A CONTRACTOR<small>ARMANDO ALVAREZ</small></a>
-        <div class="nav-items">
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
-            <a href="#work">Project ideas</a>
-            <button class="pill js-modal">Get a free estimate</button>
+  </head>
+  <body>
+    <header class="nav" id="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark">A&amp;A</span>
+          <span class="brand-text">A&amp;A CONTRACTOR<small>Armando Alvarez &middot; Est. 2004</small></span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#work">Projects</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="nav-phone" href="tel:+14848413323">(484) 841-3323</a>
+          <button class="btn btn-primary js-modal">
+            <span>Get free estimate</span>
+            <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="nav-toggle js-menu" aria-label="Open menu" aria-expanded="false"><span></span></button>
         </div>
-        <button class="menu js-menu">Menu</button>
-    </nav>
+      </div>
+    </header>
+
+    <div class="mobile-overlay js-menu-close"></div>
+    <aside class="mobile-panel" id="mobilePanel">
+      <div class="mobile-panel-head">
+        <span class="brand-text">A&amp;A CONTRACTOR</span>
+        <button class="mobile-close js-menu-close" aria-label="Close menu">&times;</button>
+      </div>
+      <a href="#services" class="js-menu-link">Services</a>
+      <a href="#process" class="js-menu-link">Process</a>
+      <a href="#work" class="js-menu-link">Projects</a>
+      <a href="#faq" class="js-menu-link">FAQ</a>
+      <button class="btn btn-primary js-modal js-menu-link" style="justify-content:center;margin-top:16px">
+        <span>Get free estimate</span>
+      </button>
+      <a href="tel:+14848413323" class="mobile-phone">(484) 841-3323</a>
+    </aside>
+
     <main id="top">
-        <section class="hero">
-            <div class="hero-copy">
-                <div>
-                    <div class="kicker reveal">Pennsylvania contractor &middot; since 2004</div>
-                    <h1 class="reveal" data-delay="100">Work that holds up.</h1>
-                    <p class="hero-summary reveal" data-delay="200">Thoughtful renovations, dependable repairs, and
-                        exterior work for the places that matter most.</p>
-                    <button class="underline-link js-modal reveal" data-delay="300">Tell us what you need
-                        <span>&nearr;</span></button>
-                </div>
-                <div class="hero-meta reveal" data-delay="400">Residential + commercial<br />Malvern and surrounding PA
-                </div>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <div class="badge reveal-item"><span class="dot"></span>Licensed &amp; insured &middot; Chester County, PA</div>
+            <h1 class="reveal-item">Work that<br />holds <em>up</em>.</h1>
+            <p class="hero-sub reveal-item">Twenty years of kitchens, baths, basements, and roofs done right the first time — for homeowners who don't want to worry about it twice.</p>
+            <div class="hero-actions reveal-item">
+              <button class="btn btn-primary js-modal">
+                <span>Get your free estimate</span>
+                <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <a href="#process" class="btn-text">See how we work <span class="arrow-slide">&rarr;</span></a>
             </div>
-            <div class="hero-image reveal" data-delay="300">
-                <span>Skilled hands. Clear communication.<br>A result you can live with.</span>
+            <div class="chip-row reveal-item">
+              <span class="chip">Licensed &amp; insured</span>
+              <span class="chip">20+ years local</span>
+              <span class="chip">Free, no-pressure estimates</span>
             </div>
-        </section>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-image">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=90" alt="Recently renovated kitchen with warm wood cabinetry" />
+            </div>
+            <div class="floating-card">
+              <div class="floating-rating"><strong>4.9</strong><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+              <p>Trusted by homeowners across Malvern &amp; Chester County</p>
+            </div>
+            <div class="floating-pill"><span class="pulse"></span>Available for new projects</div>
+          </div>
+        </div>
+      </section>
 
-        <section class="credibility reveal">
-            <p>For more than 20 years, A&amp;A has delivered reliable work with an honest, straightforward approach.</p>
-            <div class="stat"><strong>20+</strong><span>Years hands-on</span></div>
-            <div class="stat"><strong>PA</strong><span>Based in Malvern</span></div>
-            <div class="stat"><strong>Free</strong><span>Project estimates</span></div>
-        </section>
+      <section class="marquee-section" aria-label="Credentials">
+        <div class="marquee">
+          <div class="marquee-track">
+            <span>PA HIC license on file</span><span class="sep">&middot;</span>
+            <span>Fully insured</span><span class="sep">&middot;</span>
+            <span>EPA lead-safe certified</span><span class="sep">&middot;</span>
+            <span>20+ years in business</span><span class="sep">&middot;</span>
+            <span>Malvern, PA based</span><span class="sep">&middot;</span>
+            <span>Free written estimates</span><span class="sep">&middot;</span>
+            <span>PA HIC license on file</span><span class="sep">&middot;</span>
+            <span>Fully insured</span><span class="sep">&middot;</span>
+            <span>EPA lead-safe certified</span><span class="sep">&middot;</span>
+            <span>20+ years in business</span><span class="sep">&middot;</span>
+            <span>Malvern, PA based</span><span class="sep">&middot;</span>
+            <span>Free written estimates</span><span class="sep">&middot;</span>
+          </div>
+        </div>
+      </section>
 
-        <section class="section statement">
-            <div class="kicker reveal">A more considered approach</div>
-            <div class="statement-copy reveal" data-delay="100">
-                <h2>Your home deserves more than a quick fix.</h2>
-                <p>We take on the work that keeps a property strong, functional, and ready for the years ahead - with
-                    the same attention whether it is one room, one repair, or a complete transformation.</p>
-            </div>
-        </section>
+      <section class="section-tight stats reveal">
+        <p class="stats-lead">For more than two decades, A&amp;A has kept its word: show up, do it right, and stand behind it.</p>
+        <div class="stats-grid">
+          <div class="stat"><strong data-count="20" data-suffix="+">0</strong><span>Years in business</span></div>
+          <div class="stat"><strong data-count="480" data-suffix="+">0</strong><span>Projects completed</span></div>
+          <div class="stat"><strong data-count="4.9" data-decimals="1">0</strong><span>Average client rating</span></div>
+          <div class="stat"><strong class="static">Free</strong><span>Every estimate, always</span></div>
+        </div>
+      </section>
 
-        <section class="section services" id="services">
-            <div class="services-head">
-                <div class="reveal">
-                    <div class="kicker">Services, made clear</div>
-                    <h2 class="section-title">The work you need.<br>The finish you want.</h2>
-                </div>
-                <p class="reveal" data-delay="100">From the elements outside to the everyday spaces within, our team
-                    brings practical expertise to every step of your project.</p>
-            </div>
-            <div class="service-list">
-                <div class="service reveal" data-delay="0"><span class="number">01</span>
-                    <h3>Kitchen + bath renewal</h3>
-                    <p>Rework the rooms that carry your day - layout, surfaces, tile, paint, flooring, and finishing
-                        details.</p><span class="arrow">&nearr;</span>
-                </div>
-                <div class="service reveal" data-delay="100"><span class="number">02</span>
-                    <h3>Basements + spaces</h3>
-                    <p>Turn an underused level into a family room, workspace, guest area, or flexible space that earns
-                        its square footage.</p><span class="arrow">&nearr;</span>
-                </div>
-                <div class="service reveal" data-delay="200"><span class="number">03</span>
-                    <h3>Roofing + exterior care</h3>
-                    <p>Protect your property with roofing repairs, gutters, deck work, pressure washing, and exterior
-                        refreshes.</p><span class="arrow">&nearr;</span>
-                </div>
-                <div class="service reveal" data-delay="300"><span class="number">04</span>
-                    <h3>Drywall, paint + floors</h3>
-                    <p>Get the foundational work right, from clean drywall repairs to surfaces and finishes that make a
-                        room feel complete.</p><span class="arrow">&nearr;</span>
-                </div>
-            </div>
-        </section>
+      <section class="section statement reveal">
+        <div class="kicker">Why homeowners call A&amp;A</div>
+        <div class="statement-copy">
+          <h2>A patched-up job just means calling someone again next year.</h2>
+          <p>We've been in enough Chester County basements and on enough roofs to know the difference between a repair that lasts and one that just looks finished. Every job — full renovation or single afternoon fix — gets the same standard: done right, explained clearly, and built to outlast the warranty.</p>
+        </div>
+      </section>
 
-        <section class="section process" id="process">
-            <div class="process-intro reveal">
-                <div class="kicker">How it works</div>
-                <h2 class="section-title">A calm process, start to finish.</h2>
-                <p>You never need to chase down the next step. We scope the work clearly, keep communication simple, and
-                    bring the plan to life with care.</p>
+      <section class="section services" id="services">
+        <div class="services-head reveal">
+          <div>
+            <div class="kicker">What we take on</div>
+            <h2 class="section-title">The work you need, done properly.</h2>
+          </div>
+          <p>From the elements outside to the rooms you live in every day, A&amp;A brings the same hands-on attention to every project — no subcontractors passing the blame around.</p>
+        </div>
+        <div class="service-grid reveal">
+          <article class="service-card">
+            <div class="service-top">
+              <span class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 10h16M6 10V6a2 2 0 012-2h8a2 2 0 012 2v4M5 10v10a1 1 0 001 1h1a1 1 0 001-1v-2h8v2a1 1 0 001 1h1a1 1 0 001-1V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="service-number">01</span>
             </div>
-            <div class="steps">
-                <div class="step reveal" data-delay="0"><span>01</span>
-                    <h3>Walk the space.</h3>
-                    <p>We hear what is not working, talk through your goals, and understand the practical needs behind
-                        the project.</p>
-                </div>
-                <div class="step reveal" data-delay="100"><span>02</span>
-                    <h3>Make a clear plan.</h3>
-                    <p>Receive an honest estimate and a straightforward understanding of the work before we begin.</p>
-                </div>
-                <div class="step reveal" data-delay="200"><span>03</span>
-                    <h3>Build with care.</h3>
-                    <p>Our crew arrives ready, keeps you updated, and pays attention to the details that make the
-                        difference.</p>
-                </div>
+            <h3>Kitchens &amp; baths</h3>
+            <p>The rooms your family actually lives in, rebuilt to work as hard as you do — new layouts, tile, cabinetry, and fixtures that hold up to daily use.</p>
+            <span class="service-link">Talk through your kitchen <span class="arrow-slide">&rarr;</span></span>
+          </article>
+          <article class="service-card">
+            <div class="service-top">
+              <span class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="service-number">02</span>
             </div>
-        </section>
+            <h3>Basements &amp; living space</h3>
+            <p>Turn dead square footage into a room you'll actually use — a playroom, home office, or guest suite, framed and finished properly from the studs out.</p>
+            <span class="service-link">Plan your basement <span class="arrow-slide">&rarr;</span></span>
+          </article>
+          <article class="service-card">
+            <div class="service-top">
+              <span class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 11L12 4l9 7M6 10v10h5v-6h2v6h5V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="service-number">03</span>
+            </div>
+            <h3>Roofing &amp; exterior</h3>
+            <p>Shingles, flashing, gutters, decks, and pressure washing — the work that keeps water out and your home's value up.</p>
+            <span class="service-link">Get your roof checked <span class="arrow-slide">&rarr;</span></span>
+          </article>
+          <article class="service-card">
+            <div class="service-top">
+              <span class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20L18 6M15 3l6 6M3 14l7 7M3 21l3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="service-number">04</span>
+            </div>
+            <h3>Drywall, paint &amp; flooring</h3>
+            <p>The finishing work that makes or breaks a room — clean drywall repairs, straight paint lines, and flooring installed to last, not just look good on move-in day.</p>
+            <span class="service-link">Fix up a room <span class="arrow-slide">&rarr;</span></span>
+          </article>
+        </div>
+      </section>
 
-        <section class="section" id="work">
-            <div class="gallery-head reveal">
-                <div>
-                    <div class="kicker">Project possibilities</div>
-                    <h2 class="section-title">Bring more out of every room.</h2>
-                </div>
-                <p>Thought starters for the kinds of spaces A&amp;A helps homeowners improve - designed around the way
-                    you actually live.</p>
-            </div>
-            <div class="gallery">
-                <article class="gallery-card reveal" data-delay="0">
-                    <div class="gallery-image"><img
-                            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=90"
-                            alt="Refined neutral bathroom" /></div>
-                    <h3>A bathroom that resets.</h3>
-                    <p>Clean lines, durable materials, and a better start to every day.</p>
-                </article>
-                <article class="gallery-card reveal" data-delay="150">
-                    <div class="gallery-image"><img
-                            src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1100&q=90"
-                            alt="Crafted living room interior" /></div>
-                    <h3>More room to live.</h3>
-                    <p>Basement and living-space updates built around comfort and flexibility.</p>
-                </article>
-                <article class="gallery-card reveal" data-delay="300">
-                    <div class="gallery-image"><img
-                            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=90"
-                            alt="Warm contemporary interior" /></div>
-                    <h3>Details that complete it.</h3>
-                    <p>From drywall and paint to flooring, trim, and the last careful finish.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="section contact reveal">
+      <section class="section process" id="process">
+        <div class="process-intro reveal">
+          <div class="kicker">How it works</div>
+          <h2 class="section-title">A calm process, start to finish.</h2>
+          <p>You never have to chase down the next step. We scope the work clearly, keep communication simple, and bring the plan to life with care.</p>
+        </div>
+        <div class="process-steps reveal">
+          <div class="process-step">
+            <span class="step-index">01</span>
             <div>
-                <div class="kicker">Start the conversation</div>
-                <h2>Let's make your next space work better.</h2>
-                <p>Whether you are planning a renovation or have a repair that cannot wait, we are ready to talk it
-                    through.</p>
+              <h3>We walk the space</h3>
+              <p>Armando comes out personally, looks at what's actually going on, and asks how you use the space — not just what's broken.</p>
             </div>
-            <div class="contact-actions">
-                <button class="pill js-modal">Request a free estimate <span>&rarr;</span></button>
-                <div class="contact-details">
-                    <span>(484) 841-3323</span>
-                    <span>Mon-Fri &middot; 7am-10pm</span>
-                </div>
+          </div>
+          <div class="process-step">
+            <span class="step-index">02</span>
+            <div>
+              <h3>You get a real number</h3>
+              <p>A written estimate with real materials and labor costs, no vague ranges. You know what you're paying for before we start.</p>
             </div>
-        </section>
+          </div>
+          <div class="process-step">
+            <span class="step-index">03</span>
+            <div>
+              <h3>We build it right</h3>
+              <p>Our crew shows up when we say, keeps the site clean, and if anything changes, you hear it from us before you see it on the invoice.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature reveal">
+        <div class="feature-wrap">
+          <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90" alt="Warm, finished kitchen renovation with island seating" />
+          </div>
+          <div class="feature-copy">
+            <div>
+              <div class="kicker">Made for everyday living</div>
+              <h2>A kitchen that works as hard as your mornings.</h2>
+              <p>A well-made kitchen is more than a collection of finishes. It's the room that gets your coffee started, your kids fed, and your evenings unwound — so it has to actually work, not just photograph well.</p>
+            </div>
+            <div class="tags">
+              <span class="tag">Cabinet updates</span>
+              <span class="tag">Tile + surfaces</span>
+              <span class="tag">Flooring</span>
+              <span class="tag">Finish carpentry</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="gallery-head reveal">
+          <div>
+            <div class="kicker">Project possibilities</div>
+            <h2 class="section-title">Bring more out of every room.</h2>
+          </div>
+          <p>A few of the ways homeowners have put A&amp;A to work — thought-starters for what your own project could look like.</p>
+        </div>
+        <div class="gallery reveal">
+          <article class="gallery-card">
+            <div class="gallery-image">
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=90" alt="Refined neutral bathroom renovation" />
+              <div class="gallery-caption">
+                <h3>A bathroom that resets.</h3>
+                <p>Clean lines, durable materials, and a better start to every day.</p>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <div class="gallery-image">
+              <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1100&q=90" alt="Finished basement living room" />
+              <div class="gallery-caption">
+                <h3>More room to live.</h3>
+                <p>Basement and living-space updates built around comfort and flexibility.</p>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <div class="gallery-image">
+              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=90" alt="Finished interior trim and flooring detail" />
+              <div class="gallery-caption">
+                <h3>Details that complete it.</h3>
+                <p>From drywall and paint to flooring, trim, and the last careful finish.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Placeholder reviews — swap in real client quotes before launch -->
+      <section class="section testimonials" id="testimonials">
+        <div class="testimonials-head reveal">
+          <div>
+            <div class="kicker">Homeowners on the record</div>
+            <h2 class="section-title">What it's like to work with A&amp;A.</h2>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn js-prev" aria-label="Previous testimonial">&larr;</button>
+            <button class="carousel-btn js-next" aria-label="Next testimonial">&rarr;</button>
+          </div>
+        </div>
+        <div class="testimonial-track reveal" id="testimonialTrack">
+          <article class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Armando gave us a real number up front and never moved it. Our kitchen took five weeks, exactly as scoped, and the crew left the house cleaner than they found it.</p>
+            <div class="testimonial-author"><strong>Renee D.</strong><span>Malvern, PA</span></div>
+          </article>
+          <article class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>We had a roof leak two other contractors couldn't diagnose. A&amp;A found the real problem in twenty minutes and fixed it before the next storm.</p>
+            <div class="testimonial-author"><strong>Tom K.</strong><span>Downingtown, PA</span></div>
+          </article>
+          <article class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>Our basement went from storage overflow to the room our kids actually use every day. Communication was clear from the first walkthrough to the final punch list.</p>
+            <div class="testimonial-author"><strong>Priya S.</strong><span>West Chester, PA</span></div>
+          </article>
+          <article class="testimonial-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>No pressure during the estimate, no surprises on the invoice. That's rarer than it should be with contractors, and it's why we've called them back twice.</p>
+            <div class="testimonial-author"><strong>James O.</strong><span>Paoli, PA</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="faq-head reveal">
+          <div class="kicker">Good to know</div>
+          <h2 class="section-title">Questions homeowners ask us.</h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you offer free estimates?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">
+              <p>Yes — every estimate is free with no obligation. Armando walks the space with you in person and follows up with a written quote within a few days.</p>
+            </div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Are you licensed and insured?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">
+              <p>Yes, fully licensed and insured in Pennsylvania. We're happy to provide proof of insurance and our license number on request.</p>
+            </div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What areas do you serve?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">
+              <p>We're based in Malvern and take on projects throughout Chester County and the surrounding Philadelphia suburbs.</p>
+            </div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How long does a typical project take?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">
+              <p>It depends on scope — a bathroom refresh might take one to two weeks, while a basement finish or full kitchen can run four to eight. You'll get a realistic timeline in your estimate, not a guess.</p>
+            </div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you handle small repairs too, or only full renovations?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">
+              <p>Both. Some weeks we're patching drywall, others we're gutting a kitchen to the studs. No job is too small to do properly.</p>
+            </div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact reveal" id="contact">
+        <div class="contact-copy">
+          <div class="kicker">Start the conversation</div>
+          <h2>Let's make this the last time you have to call someone.</h2>
+          <p>Whether you're planning a renovation or have a repair that can't wait, Armando is ready to talk it through — no pressure, no upsell.</p>
+          <div class="contact-badges">
+            <span class="chip chip-light">Licensed &amp; insured</span>
+            <span class="chip chip-light">Free written estimates</span>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <button class="btn btn-dark js-modal">
+            <span>Request a free estimate</span>
+            <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="contact-details">
+            <div><span class="label">Call or text</span><a href="tel:+14848413323">(484) 841-3323</a></div>
+            <div><span class="label">Hours</span><span>Mon&ndash;Fri &middot; 7am&ndash;10pm</span></div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="footer reveal">
-        <span>&copy; 2026 A&amp;A Contractor</span>
-        <span>Malvern, Pennsylvania</span>
-        <a href="mailto:armandoalvarezcontractor@gmail.com">armandoalvarezcontractor@gmail.com</a>
+    <footer class="footer">
+      <span>&copy; 2026 A&amp;A Contractor</span>
+      <span>Malvern, Pennsylvania</span>
+      <a href="mailto:armandoalvarezcontractor@gmail.com">armandoalvarezcontractor@gmail.com</a>
     </footer>
 
     <div class="modal" id="modal" aria-hidden="true">
-        <div class="modal-box">
-            <button class="close" aria-label="Close">&times;</button>
-            <div class="kicker">Free estimate</div>
-            <h2>Tell us about it.</h2>
-            <p>Share a few details and we'll be in touch to discuss your project.</p>
-            <form id="estimate-form">
-                <input required placeholder="Your name" />
-                <input required type="email" placeholder="Email address" />
-                <textarea placeholder="What would you like to improve?"></textarea>
-                <button class="pill">Send project details &rarr;</button>
-            </form>
-        </div>
+      <div class="modal-box">
+        <button class="close js-close" aria-label="Close">&times;</button>
+        <div class="kicker">Free estimate</div>
+        <h2>Tell us about the project.</h2>
+        <p>Share a few details and Armando will follow up personally — usually within a business day.</p>
+        <form id="estimate-form">
+          <div class="field">
+            <input required id="f-name" placeholder=" " />
+            <label for="f-name">Your name</label>
+          </div>
+          <div class="field">
+            <input required type="email" id="f-email" placeholder=" " />
+            <label for="f-email">Email address</label>
+          </div>
+          <div class="field">
+            <input type="tel" id="f-phone" placeholder=" " />
+            <label for="f-phone">Phone (optional)</label>
+          </div>
+          <div class="field">
+            <textarea id="f-msg" placeholder=" "></textarea>
+            <label for="f-msg">What would you like to improve?</label>
+          </div>
+          <button class="btn btn-primary" type="submit">
+            <span>Send project details</span>
+            <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

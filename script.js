@@ -1,66 +1,131 @@
-// --- Modal Logic ---
+/* ---------- nav scroll state ---------- */
+const nav = document.querySelector("#nav");
+const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 8);
+onScroll();
+window.addEventListener("scroll", onScroll, { passive: true });
+
+/* ---------- mobile menu ---------- */
+const menuButton = document.querySelector(".js-menu");
+const menuCloseTargets = document.querySelectorAll(".js-menu-close");
+const menuLinks = document.querySelectorAll(".js-menu-link");
+
+const openMenu = () => {
+  document.body.classList.add("menu-open");
+  menuButton.setAttribute("aria-expanded", "true");
+};
+const closeMenu = () => {
+  document.body.classList.remove("menu-open");
+  menuButton.setAttribute("aria-expanded", "false");
+};
+
+menuButton.addEventListener("click", openMenu);
+menuCloseTargets.forEach((el) => el.addEventListener("click", closeMenu));
+menuLinks.forEach((el) => el.addEventListener("click", closeMenu));
+
+/* ---------- estimate modal ---------- */
 const modal = document.querySelector("#modal");
 const modalButtons = document.querySelectorAll(".js-modal");
-const closeButton = document.querySelector(".close");
+const closeButton = document.querySelector(".js-close");
 const estimateForm = document.querySelector("#estimate-form");
 
 const openModal = () => {
+  closeMenu();
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
 };
 
 const closeModal = () => {
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
 };
 
-modalButtons.forEach((btn) => btn.addEventListener("click", openModal));
+modalButtons.forEach((button) => button.addEventListener("click", openModal));
 closeButton.addEventListener("click", closeModal);
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) closeModal();
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) closeModal();
 });
-
-estimateForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  estimateForm.innerHTML = `<h3 style="font-family: Manrope;">Thank you.</h3><p style="color: var(--text-muted);">We have received your details and will be in touch shortly.</p>`;
-});
-
-// --- Scroll Effects (Nav) ---
-const nav = document.querySelector(".js-nav");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeModal();
+    closeMenu();
   }
 });
 
-// --- Advanced Staggered Reveal Animations ---
-const observerOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.15
+estimateForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  estimateForm.innerHTML = '<p class="form-success">Thanks — Armando will reach out within a business day.</p>';
+});
+
+/* ---------- FAQ accordion ---------- */
+document.querySelectorAll(".faq-item").forEach((item) => {
+  const question = item.querySelector(".faq-question");
+  question.addEventListener("click", () => {
+    const isOpen = item.classList.contains("open");
+    item.classList.toggle("open", !isOpen);
+    question.setAttribute("aria-expanded", String(!isOpen));
+  });
+});
+
+/* ---------- testimonial carousel ---------- */
+const track = document.querySelector("#testimonialTrack");
+const prevButton = document.querySelector(".js-prev");
+const nextButton = document.querySelector(".js-next");
+
+const scrollByCard = (direction) => {
+  const card = track.querySelector(".testimonial-card");
+  if (!card) return;
+  const distance = card.getBoundingClientRect().width + 18;
+  track.scrollBy({ left: distance * direction, behavior: "smooth" });
 };
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      // Read data-delay attribute or default to 0
-      const delay = el.getAttribute('data-delay') || 0;
+if (prevButton && nextButton) {
+  prevButton.addEventListener("click", () => scrollByCard(-1));
+  nextButton.addEventListener("click", () => scrollByCard(1));
+}
 
-      // Apply delay dynamically
-      setTimeout(() => {
-        el.classList.add('visible');
-      }, delay);
+/* ---------- animated stat counters ---------- */
+const animateCount = (el) => {
+  const target = parseFloat(el.dataset.count);
+  const decimals = parseInt(el.dataset.decimals || "0", 10);
+  const suffix = el.dataset.suffix || "";
+  const duration = 1400;
+  const start = performance.now();
 
-      // Stop observing once revealed
-      observer.unobserve(el);
-    }
-  });
-}, observerOptions);
+  const step = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = target * eased;
+    el.textContent = value.toFixed(decimals) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
 
-// Select all elements with the 'reveal' class
-document.querySelectorAll('.reveal').forEach((el) => {
-  observer.observe(el);
-});
+const countObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll("[data-count]").forEach(animateCount);
+        countObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.4 }
+);
+document.querySelectorAll(".stats-grid").forEach((el) => countObserver.observe(el));
+
+/* ---------- scroll reveal ---------- */
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.16 }
+);
+document.querySelectorAll(".reveal").forEach((section) => revealObserver.observe(section));
